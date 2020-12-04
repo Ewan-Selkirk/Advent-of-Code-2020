@@ -1,12 +1,14 @@
 num_list = []
 
 
-def day1_p1():
+def setup():
     f = open("./input.txt", "r")
 
     for line in f:
         num_list.append(line.strip("\r\n"))
 
+
+def day1_p1():
     for num1 in num_list:
         for num2 in num_list:
             if num1 != num2:

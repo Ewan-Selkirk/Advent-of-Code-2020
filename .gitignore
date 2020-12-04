@@ -1,2 +1,3 @@
+# Stop Git from pushing folders created by PyCharm
 .idea/
 venv/

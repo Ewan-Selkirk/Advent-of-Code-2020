@@ -4,7 +4,7 @@ psw = []
 count = 0
 
 
-def checkPassword(p_min, p_max, char, password, debug):
+def check_password(p_min, p_max, char, password, debug):
     if int(p_min) <= password.count(char) <= int(p_max):
         if debug:
             print(password, "is a valid password!")
@@ -15,7 +15,7 @@ def checkPassword(p_min, p_max, char, password, debug):
         return False
 
 
-def checkPassword_p2(p_min, p_max, char, password, debug):
+def check_password_p2(p_min, p_max, char, password, debug):
     psw_list = list(password)
 
     if psw_list[p_min - 1] == char or psw_list[p_max - 1] == char:
@@ -40,28 +40,28 @@ def setup():
         psw.append(split_line[2].strip("\n"))
 
 
-def day2_p1():
+def day2_p1(debug):
     global count
 
     for x in range(0, 1000):
         min_req = int(psw_req[x].split("-")[0])
         max_req = int(psw_req[x].split("-")[1])
 
-        if checkPassword(min_req, max_req, psw_char[x], psw[x], debug=False):
+        if check_password(min_req, max_req, psw_char[x], psw[x], debug):
             count += 1
 
     print(count)
     count = 0
 
 
-def day2_p2():
+def day2_p2(debug):
     global count
 
     for x in range(0, 1000):
         min_req = int(psw_req[x].split("-")[0])
         max_req = int(psw_req[x].split("-")[1])
 
-        if checkPassword_p2(min_req, max_req, psw_char[x], psw[x], debug=False):
+        if check_password_p2(min_req, max_req, psw_char[x], psw[x], debug):
             count += 1
 
     print(count)
@@ -70,5 +70,5 @@ def day2_p2():
 
 if __name__ == '__main__':
     setup()
-    day2_p1()
-    day2_p2()
+    day2_p1(True)
+    day2_p2(True)
