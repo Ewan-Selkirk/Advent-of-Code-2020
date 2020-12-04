@@ -1,12 +1,15 @@
+import re
+
 passport_data = []
 fields_to_search = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
 field_reqs = {
-    "byr": [1920, 2002],
-    "iyr": [2010, 2020],
-    "eyr": [2020, 2030],
-    "hgt": {"cm": [150, 193], "in": [59, 76]},
-    "hcl": [],
-    "ecl": ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
+    "byr": "(byr:(19[2-9][0-9]|200[0-2]))",
+    "iyr": "(iyr:(201[0-9]|2020))",
+    "eyr": "(eyr:(202[0-9]|2030)",
+    "hgt": "((hgt:1[5-9][0-9]cm)|(hgt:(59|6[0-9]|7[0-6])in))",
+    "hcl": "(hcl:#[0-9a-f]{6})",
+    "ecl": "(ecl:(amb|blu|brn|gry|grn|hzl|oth))",
+    "pid": "(pid:([0-9]{9})))"
 }
 
 
@@ -44,7 +47,7 @@ def day4_p1():
                 count -= 1
                 break
 
-    print(count, "passports are valid")
+    print(count, "passports are valid\n")
 
 
 def day4_p2():
@@ -52,18 +55,15 @@ def day4_p2():
     print(count, "passports to check")
 
     for passport in passport_data:
-        for validation in fields_to_search:
-            if passport.find(validation) != -1:
-                if field_reqs[validation][0] >= int(passport.split(":")[1].split(" ")[0]) <= field_reqs[validation][1]:
-                    print(validation, "is valid")
-                    break
-                break
+        if len(re.findall(str(field_reqs["byr"] + "|" + field_reqs["iyr"] + "|" + field_reqs["eyr"] + "|" +
+                              field_reqs["hgt"] + "|" + field_reqs["hcl"] + "|" + field_reqs["ecl"] + "|" +
+                              field_reqs["pid"]), passport)) < 7:
             count -= 1
 
-    print(count)
+    print(count, "passports are valid")
 
 
 if __name__ == '__main__':
     setup()
     day4_p1()
-    # day4_p2()
+    day4_p2()
