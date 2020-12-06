@@ -33,8 +33,7 @@ def setup():
                 tmp.clear()
             else:
                 tmp.append(line.rstrip())
-
-        # print(passport_data)
+    passport_data.append(shrink_array(tmp))
 
 
 def day4_p1():
