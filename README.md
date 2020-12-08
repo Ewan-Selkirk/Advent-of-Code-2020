@@ -11,7 +11,7 @@ Here is a repository of all my solutions to the [Advent of Code 2020](https://ad
 | [Day 5](https://adventofcode.com/2020/day/5)   | ✔          | ✔           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day5)     |
 | [Day 6](https://adventofcode.com/2020/day/6)   | ✔          | ✔           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day6)     |
 | [Day 7](https://adventofcode.com/2020/day/7)   | ✔          | ✖           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day7)     |
-| [Day 8](https://adventofcode.com/2020/day/8)   | ✖          | ✖           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day8)     |
+| [Day 8](https://adventofcode.com/2020/day/8)   | ✔          | ✖           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day8)     |
 | [Day 9](https://adventofcode.com/2020/day/9)   | ✖          | ✖           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day9)     |
 | [Day 10](https://adventofcode.com/2020/day/10) | ✖          | ✖           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day10)    |
 | [Day 11](https://adventofcode.com/2020/day/11) | ✖          | ✖           | [Link](https://github.com/Ewan-Selkirk/Advent-of-Code-2020/tree/main/src/day11)    |
